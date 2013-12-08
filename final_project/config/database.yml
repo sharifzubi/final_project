@@ -44,3 +44,6 @@ production:
   adapter: postgresql
   encoding: unicode
   database: final_project_production
+  pool: 5
+  username: final_project
+  password:
