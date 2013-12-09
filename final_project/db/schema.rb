@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20131209110152) do
 
   create_table "memories", :force => true do |t|
     t.text     "text"
+    t.string   "track"
     t.integer  "user_id"
     t.integer  "photo_id"
     t.datetime "created_at", :null => false
