@@ -39,6 +39,9 @@
                 .form-group
                   = f.label :about_me, "About me:", class: "clear-emphasis"
                   = f.text_area :about_me, placeholder: "Tell us a bit about yourself...", class: "form-control", rows: 4
+                .form-group
+                  = f.label :current_password, class: "required hint"
+                  = f.password_field :current_password, placeholder: "Current Password", class: "form-control"
 
               .form-group
                 = f.submit "Update My Profile", class: "btn btn-default form-control"
