@@ -31,7 +31,7 @@
               = f.file_field :avatar
             .form-group
               = f.label :favourite_location, class: "clear-emphasis"
-              = select(:user, :favourite_location, (%w(Chelsea Fulham Hammersmith Mayfair Camden Islington Angel OldStreet Shoreditch Hoxton BrickLane Blackfriars Newcastle Brighton Oxford Cambridge)))
+              = select(:user, :favourite_location, (%w(Chelsea Fulham Hammersmith Mayfair Camden Islington Angel OldStreet Shoreditch Hoxton BrickLane Blackfriars Farringdon Dalston Barnes)))
             .form-group
               = f.label :about_me, "About me:", class: "clear-emphasis"
               = f.text_area :about_me, placeholder: "Tell us a bit about yourself...", class: "form-control", rows: 4
