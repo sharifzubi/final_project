@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
 
   ### ASSOCIATIONS
   has_many :photos
-  has_one :location, through: :photo
+  # has_one :location, through: :photo
+  # has_many :memories, through: :photo
 
 end
