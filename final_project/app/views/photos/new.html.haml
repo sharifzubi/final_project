@@ -1,0 +1,16 @@
+%h2 Add a Photograph
+
+= form_for(@photo) do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+    %br/
+
+    = f.label :image
+    = f.file_field :image
+    %br/
+
+    = f.submit class: "btn btn-primary"
+
+%p
+= link_to "Back to Homepage", root_url

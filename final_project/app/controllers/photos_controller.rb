@@ -15,7 +15,7 @@ class PhotosController < ApplicationController
     @photo.user = current_user
     if @photo.save
       session[:photo_id] = @photo.id
-      redirect_to @photo.user
+      redirect_to photos_path
     else
       render :new
     end

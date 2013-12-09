@@ -1,0 +1,5 @@
+%h1 Photos
+
+- @photos.each do |photo|
+  %h3= photo.title
+  %h3= image_tag photo.image
