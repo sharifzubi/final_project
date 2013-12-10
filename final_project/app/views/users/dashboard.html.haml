@@ -1,0 +1,18 @@
+%h1 My Profile
+
+%h1 Photos
+
+- @photos.each do |photo|
+  %h3= photo.title
+  = image_tag photo.image
+  %ul
+    - photo.memories.each do |memory|
+      %li= memory.text
+  = link_to "Delete", photo_path(photo), method: :delete
+
+
+
+.dash-unit
+  #links.right
+    = link_to "View Profile", user_path(current_user)
+    = link_to "Update Profile", edit_user_registration_path

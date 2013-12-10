@@ -12,10 +12,11 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.new params[:photo]
-    @photo.user = current_user
+    @photo.user_id = current_user.id
     if @photo.save
       session[:photo_id] = @photo.id
       redirect_to photos_path
+      # redirect_to dashboard_path
     else
       render :new
     end
@@ -28,7 +29,6 @@ class PhotosController < ApplicationController
 
 
   def edit
-
   end
 
 

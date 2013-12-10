@@ -2,3 +2,15 @@
 
 %p
   = image_tag @photo.image
+
+%br/
+= link_to "Delete Photo", photo_path(@photo), method: :delete
+
+/ %h5 Memories
+
+/ - @photo.memories.each do |memory|
+/   .photo-memory
+/   %p
+/     = memory.text
+/     \::
+/     = memory.user.username

@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
 
   ### ASSOCIATIONS
   belongs_to :user
-
+  has_many :memories
   ### CARRIERWAVE
   mount_uploader :image, ImageUploader
 
