@@ -7,6 +7,9 @@ class PhotosController < ApplicationController
 
   def new
     @photo = Photo.new
+    # @memory = Memory.new
+
+    3.times { @photo.memories.build }
   end
 
 
@@ -15,8 +18,7 @@ class PhotosController < ApplicationController
     @photo.user_id = current_user.id
     if @photo.save
       session[:photo_id] = @photo.id
-      redirect_to photos_path
-      # redirect_to dashboard_path
+      redirect_to dashboard_path
     else
       render :new
     end

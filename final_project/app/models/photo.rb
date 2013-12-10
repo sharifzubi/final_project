@@ -7,6 +7,9 @@ class Photo < ActiveRecord::Base
   belongs_to :user
   has_many :memories
 
+  ### NESTED MODEL FORMS
+  # accepts_nested_attributes_for :memories, :reject_if => lambda { |a| a[:title].blank? }
+
   ### CARRIERWAVE
   mount_uploader :image, ImageUploader
 
