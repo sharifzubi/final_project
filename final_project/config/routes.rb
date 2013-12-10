@@ -10,7 +10,7 @@ FinalProject::Application.routes.draw do
 
   #nested routes
   # , except: [:index, :edit, :update]
-  resources :photos, except: [:index, :edit, :update] do
+  resources :photos, except: [:index] do
     resources :memories
   end
 

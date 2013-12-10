@@ -9,6 +9,7 @@ class Photo < ActiveRecord::Base
 
   ### NESTED MODEL FORMS
   accepts_nested_attributes_for :memories
+
   ### CARRIERWAVE
   mount_uploader :image, ImageUploader
 

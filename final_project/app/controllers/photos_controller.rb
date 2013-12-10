@@ -31,20 +31,21 @@ class PhotosController < ApplicationController
 
 
   def edit
+    @photo = Photo.find(params[:id])
   end
 
 
   def update
     photo = Photo.find(params[:id])
     photo.update_attributes(params[:photo])
-    redirect_to(photo)
+    redirect_to dashboard_path
   end
 
 
   def destroy
     photo = Photo.find(params[:id])
     photo.delete
-    redirect_to(photos_path)
+    redirect_to dashboard_path
   end
 
 

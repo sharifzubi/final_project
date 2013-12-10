@@ -1,23 +1,6 @@
 %h2 Add a Photograph
 
-= form_for(@photo) do |f|
-  .field
-    = f.label :title
-    = f.text_field :title
-    %br/
-
-  .field
-    = f.label :image
-    = f.file_field :image
-    %br/
-
-  .field
-    = f.fields_for :memories do |f|
-      = f.label :text
-      = f.text_field :text
-    %br/
-
-    = f.submit class: "btn btn-primary"
+= render "form"
 
 %p
 = link_to "Back to Dashboard", dashboard_path

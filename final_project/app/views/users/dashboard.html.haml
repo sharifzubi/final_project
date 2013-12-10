@@ -7,11 +7,13 @@
   = image_tag photo.image
   %br
   = link_to "Delete", photo_path(photo), method: :delete
+  |
+  = link_to "Edit", edit_photo_path(photo)
   %ul
     - photo.memories.each do |memory|
       %li= memory.text
       %br
-      = link_to "Add Memory", new_photo_memory_path(memory)
+      / = link_to "Add Memory", new_photo_memory_path(memory)
 
 = link_to "Add Photo", new_photo_path
 
