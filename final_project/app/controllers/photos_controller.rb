@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new
     # @memory = Memory.new
 
-    3.times { @photo.memories.build }
+    @photo.memories.build
   end
 
 

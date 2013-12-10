@@ -6,11 +6,11 @@ FinalProject::Application.routes.draw do
 
   root to: "home#index" # req for devise config
 
-  resources :users
+  resources :users #, except: [:index ]
 
   #nested routes
   # , except: [:index, :edit, :update]
-  resources :photos do
+  resources :photos, except: [:index, :edit, :update] do
     resources :memories
   end
 
