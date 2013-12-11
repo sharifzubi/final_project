@@ -8,7 +8,7 @@
 
 
 User.destroy_all
-# Location.destroy_all
+Location.destroy_all
 
 
 
@@ -17,13 +17,21 @@ user1 = User.create(first_name: "David", last_name:"Luiz", username: "davidluiz4
 user1 = User.create(first_name: "John", last_name:"Terry", username: "jt26", email: "jt@jt.com", favourite_location: "Chelsea", password: "password", about_me: "", admin: false, confirmed_at: DateTime.now)
 
 
-# l1 = Location.create(name: "Chelsea", longitude: , latitude: )
-# l2 = Location.create(name: "Hammersmith", longitude: , latitude: )
-# l3 = Location.create(name: "Shoreditch", longitude: , latitude: )
-# l4 = Location.create(name: "Hoxton", longitude: , latitude: )
-# l5 = Location.create(name: "Old Street", longitude: , latitude: )
-# l6 = Location.create(name: "", longitude: , latitude: )
-# l7 = Location.create(name: "", longitude: , latitude: )
-# l8 = Location.create(name: "", longitude: , latitude: )
-# l9 = Location.create(name: "", longitude: , latitude: )
-# l10 = Location.create(name: "", longitude: , latitude: )
+l1 = Location.create(name: "Chelsea", longitude: "-0.174936", latitude: "51.485093")
+l2 = Location.create(name: "Fulham", longitude: "-0.21393", latitude: "51.482561")
+l3 = Location.create(name: "Hammersmith", longitude: "-0.223731", latitude: "51.491188")
+l4 = Location.create(name: "Mayfair", longitude: "-0.147806", latitude: "51.511627")
+l5 = Location.create(name: "Camden", longitude: "-0.142555", latitude: "51.539011")
+l6 = Location.create(name: "Islington", longitude: "-0.104963", latitude: "51.538977")
+# l7 = Location.create(name: "Angel", longitude: , latitude: )
+# l8 = Location.create(name: "OldStreet", longitude: , latitude: )
+# l9 = Location.create(name: "Shoreditch", longitude: , latitude: )
+# l10 = Location.create(name: "Hoxton", longitude: , latitude: )
+# l10 = Location.create(name: "BrickLane", longitude: , latitude: )
+# l10 = Location.create(name: "Blackfriars", longitude: , latitude: )
+# l10 = Location.create(name: "Farringdon", longitude: , latitude: )
+# l10 = Location.create(name: "Dalston", longitude: , latitude: )
+# l10 = Location.create(name: "Barnes", longitude: , latitude: )
+
+
+# (%w(Chelsea Fulham Hammersmith Mayfair Camden Islington Angel OldStreet Shoreditch Hoxton BrickLane Blackfriars Farringdon Dalston Barnes)))
