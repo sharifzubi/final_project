@@ -16,7 +16,9 @@
       / = link_to "Add Memory", new_photo_memory_path(memory)
 
 = link_to "Add Photo", new_photo_path
+%br/
 
 .dash-unit
   #links.right
+  %p
     = link_to "My Profile", user_path(current_user)

@@ -14,6 +14,6 @@ FinalProject::Application.routes.draw do
     resources :memories
   end
 
-  get   'dashboard',          :to => "users#dashboard"
-  # get   'google_map',          :to => "users#google_map"
+  get   'dashboard',        :to => "users#dashboard"
+  get   'journey',          :to => "users#journey"
 end
