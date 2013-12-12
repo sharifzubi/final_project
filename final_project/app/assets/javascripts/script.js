@@ -51,7 +51,7 @@ function initialize() {
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: "Home"
+    // icon: image
   });
 
   window.infowindow = new google.maps.InfoWindow({
