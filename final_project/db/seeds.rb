@@ -32,6 +32,3 @@ l6 = Location.create(name: "Islington", longitude: "-0.104963", latitude: "51.53
 # l10 = Location.create(name: "Farringdon", longitude: , latitude: )
 # l10 = Location.create(name: "Dalston", longitude: , latitude: )
 # l10 = Location.create(name: "Barnes", longitude: , latitude: )
-
-
-# (%w(Chelsea Fulham Hammersmith Mayfair Camden Islington Angel OldStreet Shoreditch Hoxton BrickLane Blackfriars Farringdon Dalston Barnes)))
