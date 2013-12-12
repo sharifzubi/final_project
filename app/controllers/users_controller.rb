@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
   def dashboard
-    @photos = current_user.photos
+    if current_user
+      @photos = current_user.photos
+    else
+      redirect_to :new_user_session
+    end
   end
 
 
