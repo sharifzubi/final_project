@@ -39,11 +39,6 @@ user3.photos << Photo.create(title: "Captain Leader Legend", remote_image_url: "
 # user3.photos << photo6
 # user3.photos << photo2
 
-# # Carrierwave Photos
-# pi = PhotoImage.create!(:photo => photo)
-# pi.image.store!(File.open(File.join(Rails.root, 'test.jpg')))
-# photo.photo_images << pi
-# photo.save!
 
 # Memories
 memory1 = Memory.create(text: "Westwaaay")
@@ -63,12 +58,16 @@ memory7 = Memory.create(text: "Westwaaay bruvvv")
 # photo7.memories << memory7
 
 # Locations
-l1 = Location.create(name: "Chelsea", longitude: "-0.174936", latitude: "51.485093")
-l2 = Location.create(name: "Fulham", longitude: "-0.21393", latitude: "51.482561")
-l3 = Location.create(name: "Hammersmith", longitude: "-0.223731", latitude: "51.491188")
-l4 = Location.create(name: "Mayfair", longitude: "-0.147806", latitude: "51.511627")
-l5 = Location.create(name: "Camden", longitude: "-0.142555", latitude: "51.539011")
-l6 = Location.create(name: "Islington", longitude: "-0.104963", latitude: "51.538977")
+# location1 = Location.create(name: "Stamford Bridge", longitude: "-0.190209", latitude: "51.481188")
+
+# user2.location << location1
+
+# l1 = Location.create(name: "Chelsea", longitude: "-0.174936", latitude: "51.485093")
+# l2 = Location.create(name: "Fulham", longitude: "-0.21393", latitude: "51.482561")
+# l3 = Location.create(name: "Hammersmith", longitude: "-0.223731", latitude: "51.491188")
+# l4 = Location.create(name: "Mayfair", longitude: "-0.147806", latitude: "51.511627")
+# l5 = Location.create(name: "Camden", longitude: "-0.142555", latitude: "51.539011")
+# l6 = Location.create(name: "Islington", longitude: "-0.104963", latitude: "51.538977")
 # l7 = Location.create(name: "Angel", longitude: , latitude: )
 # l8 = Location.create(name: "OldStreet", longitude: , latitude: )
 # l9 = Location.create(name: "Shoreditch", longitude: , latitude: )
