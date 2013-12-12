@@ -5,6 +5,8 @@
 - @photos.each do |photo|
   %h3= photo.title
   = image_tag photo.image
+  - if photo.location
+    = "#{photo.location.latitude} #{photo.location.longitude}"
   %br
   = link_to "Delete", photo_path(photo), method: :delete
   |

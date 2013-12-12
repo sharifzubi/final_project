@@ -30,7 +30,7 @@ init_autocomplete = function(map, marker){
       address = (place.address_components[0] && place.address_components[0].short_name || "");
     }
 
-    infowindow.setContent("<div>" + place.name + "</div><br/>" + address);
+    infowindow.setContent("<div>" + place.name + "</div>");
     infowindow.open(map, marker)
   })
 }
@@ -48,6 +48,23 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
+
+  $.each(window.photos, function(index, item){
+    var myLatLng = new google.maps.LatLng(item.location.latitude, item.location.longitude);
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      // icon: image
+    });
+
+    infowindow2 = new google.maps.InfoWindow({
+      content: "<img src='"+ item.image.image.url+"'>"
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow2.open(map,marker);
+    });
+  })
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,

@@ -13,5 +13,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
+  def journey
+    @photos = current_user.photos.includes(:location)
+    @locations
+  end
 end

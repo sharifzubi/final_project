@@ -6,6 +6,7 @@ class Photo < ActiveRecord::Base
   ### ASSOCIATIONS
   belongs_to :user
   has_many :memories
+  has_one :location
 
   ### NESTED MODEL FORMS
   accepts_nested_attributes_for :memories
@@ -13,4 +14,8 @@ class Photo < ActiveRecord::Base
   ### CARRIERWAVE
   mount_uploader :image, ImageUploader
 
+
+  def as_json(options = {})
+    super options.merge(:methods => [:location, :title, :image], :only => [:id, :latitude, :longitude])
+  end
 end

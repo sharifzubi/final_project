@@ -8,6 +8,10 @@
   #map-canvas
 
   %h3 AUTOCOMPLETE
+
+  :javascript
+    window.photos = #{@photos.to_json}
+
   %form#places_form
     .row{role: "search"}
   %input#autocomplete
