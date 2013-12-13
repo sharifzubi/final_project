@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  # authorize_resource
+
   def dashboard
     if current_user
       @photos = current_user.photos
@@ -11,6 +13,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    # authorize! :show, @user
   end
 
   def journey

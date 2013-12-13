@@ -50,11 +50,10 @@ function initialize() {
 
 
   $.each(window.photos, function(index, item){
-    var myLatLng = new google.maps.LatLng(item.location.latitude, item.location.longitude);
+    // var myLatLng = new google.maps.LatLng(item.location.latitude, item.location.longitude);
     var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
-      // icon: image
     });
 
     infowindow2 = new google.maps.InfoWindow({
@@ -67,8 +66,7 @@ function initialize() {
   })
   var marker = new google.maps.Marker({
     position: myLatLng,
-    map: map,
-    // icon: image
+    map: map
   });
 
   window.infowindow = new google.maps.InfoWindow({
@@ -87,4 +85,5 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-
+//www.stackoverflow.com/questions/5000870/defaults-for-to-json-in-rails-with-include
+//www.stackoverflow.com/questions/383692/what-is-json-and-why-would-i-use-it

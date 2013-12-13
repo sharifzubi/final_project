@@ -7,7 +7,7 @@ gem 'pg'
 
 gem 'devise'
 
-# gem 'cancan'
+gem 'cancan'
 
 gem 'carrierwave'
 

@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
 
+  # authorize_resource
+
   def index
     @photos = Photo.all
   end
@@ -7,8 +9,8 @@ class PhotosController < ApplicationController
 
   def new
     @photo = Photo.new
-
     @photo.memories.build
+    # authorize! :new, @photo
   end
 
 
@@ -21,6 +23,7 @@ class PhotosController < ApplicationController
     else
       render :new
     end
+    # authorize!(:create, @photo || Photo)
   end
 
 
@@ -31,18 +34,21 @@ class PhotosController < ApplicationController
 
   def edit
     @photo = Photo.find(params[:id])
+    # authorize! :edit, @photo
   end
 
 
   def update
     photo = Photo.find(params[:id])
     photo.update_attributes(params[:photo])
+    # authorize! :update, photo
     redirect_to dashboard_path
   end
 
 
   def destroy
     photo = Photo.find(params[:id])
+    # authorize! :destroy, photo
     photo.delete
     redirect_to dashboard_path
   end
