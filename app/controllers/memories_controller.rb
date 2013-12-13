@@ -1,6 +1,5 @@
 class MemoriesController < ApplicationController
 
-  # authorize_resource
 
   def index
     @memories = Memory.all
@@ -10,7 +9,7 @@ class MemoriesController < ApplicationController
   def new
     @photo = Photo.find(params[:photo_id])
     @memory = Memory.new
-    # authorize! :new, @memory
+    authorize! :new, @memory
   end
 
 
@@ -24,17 +23,17 @@ class MemoriesController < ApplicationController
       flash[:alert] = "Memory NOT created!"
       render :new
     end
-    # authorize!(:create, @memory || Memory)
+    authorize!(:create, @memory || Memory)
   end
 
 
   def show
-    # @memory = Memory.find(params[:id])
+    @memory = Memory.find(params[:id])
   end
 
 
   def edit
-    # @memory = Memory.find(params[:id])
+    @memory = Memory.find(params[:id])
   end
 
 
@@ -42,14 +41,14 @@ class MemoriesController < ApplicationController
     # memory = Memory.find(params[:id])
     memory.update_attributes(params[:memory])
     redirect_to(memory)
-    # authorize! :update, memory
+    authorize! :update, memory
   end
 
 
   def destroy
     memory = Memory.find(params[:id])
     memory.delete
-    # authorize! :destroy, memory
+    authorize! :destroy, memory
     # redirect_to(memory.photo), notice: "Memory successfully DELETED!!!"
   end
 

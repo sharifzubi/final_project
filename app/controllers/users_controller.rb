@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-  # authorize_resource
 
   def dashboard
     if current_user
@@ -10,10 +9,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.all
+    @users -= [current_user]
+  end
 
   def show
     @user = User.find(params[:id])
-    # authorize! :show, @user
+    authorize! :show, @user
   end
 
   def journey

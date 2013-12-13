@@ -1,1 +1,4 @@
-@users
+%h1 Users
+
+- @users.each do |user|
+  %h3= link_to user.username, dashboard_path(user)
