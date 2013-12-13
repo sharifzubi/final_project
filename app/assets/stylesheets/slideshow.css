@@ -1,0 +1,19 @@
+.slider {
+  /*margin: 10px 0;*/
+  width: 1180px; /* Update to your slider width */
+  height: 580px; /* Update to your slider height */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider li {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+img {
+  width: 1180px;
+  height: 580px;
+}
