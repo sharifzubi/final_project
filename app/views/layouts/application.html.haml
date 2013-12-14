@@ -10,25 +10,27 @@
     = csrf_meta_tags
 
   %body
-    %nav.nav
-      .left
-        / = image_tag("thumbnail")
-      - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
-      - if user_signed_in?
-        %ul.left
-          = link_to 'Dashboard', dashboard_path
-          |
-          = link_to 'Journey', journey_path
-        %ul.right
-          = image_tag current_user.avatar, {:class => 'nav-avatar'}
-          / = "Logged in as #{current_user.first_name}"
-          = link_to 'Logout?',  destroy_user_session_path, method: :delete
-      - else
-        %ul
-          = link_to 'Sign Up', new_user_registration_path, {:class => 'sign-up-link'}
-          |
-          = link_to 'Sign In', new_user_session_path
+    .container
+      %nav.nav
+        / .logo
+        %img.logo{src: "/images/cameralogo.jpg"}
 
-      = yield
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}"
+        - if user_signed_in?
+          %ul.left
+            = link_to 'Dashboard', dashboard_path
+            |
+            = link_to 'Journey', journey_path
+          %ul.right
+            = image_tag current_user.avatar, {:class => 'nav-avatar'}
+            / = "Logged in as #{current_user.first_name}"
+            = link_to 'Logout?',  destroy_user_session_path, method: :delete
+        - else
+          %ul
+            = link_to 'Sign Up', new_user_registration_path, {:class => 'sign-up-link'}
+            |
+            = link_to 'Sign In', new_user_session_path
+
+        = yield
 

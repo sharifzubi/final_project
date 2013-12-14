@@ -1,0 +1,46 @@
+.slider {
+  /*margin: 10px 0;*/
+  width: 1180px; /* Update to your slider width */
+  height: 580px; /* Update to your slider height */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider li {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+img.carousel {
+  margin: 0px;
+  width: 1200px;
+  height: 580px;
+}
+
+img.logo {
+  margin: 5px;
+  width: 80px;
+  height: 40px;
+}
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:50px;
+  right:0;
+  z-index:200;
+  height:50px;
+  background:#000;
+  border-bottom:1px solid #444;
+}
+
+.nav ul {
+  float: right;
+  margin:0px;
+  padding:10px;
+  list-style-type:none;
+  font-weight: bold;
+}
