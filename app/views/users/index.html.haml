@@ -3,9 +3,12 @@
 - if current_user.admin == true
   - @users.each do |user|
     %h3= link_to user.username, user_path(user)
-    = link_to user.first_name
+    / = link_to user.avatar, dashboard_path(user)
+
+    = link_to "Delete User", user_path(user), method: :delete
 - else
   - @users.each do |user|
-    %h3= link_to user.username, dashboard_path
-
+    %h3= link_to user.username, user_path(user)
   / = link_to user.avatar, dashboard_path(user)
+
+  / =link_to user.journey PAGES when they click on AVATAR picture
