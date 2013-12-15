@@ -20,6 +20,7 @@ img.carousel {
 }
 
 img.logo {
+  float: left;
   margin: 5px;
   width: 80px;
   height: 40px;
@@ -33,14 +34,32 @@ img.logo {
   right:0;
   z-index:200;
   height:50px;
-  background:#000;
+  // background:#000;
   border-bottom:1px solid #444;
 }
 
-.nav ul {
+.nav ul.right {
   float: right;
   margin:0px;
   padding:10px;
   list-style-type:none;
   font-weight: bold;
 }
+
+.nav ul.left {
+  float: left;
+  margin:0px;
+  padding:10px;
+  list-style-type:none;
+  font-weight: bold;
+}
+
+// h1.dashboard {
+//   float: left;
+// }
+
+body {
+  background-color: white;
+}
+
+

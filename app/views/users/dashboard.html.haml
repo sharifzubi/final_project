@@ -1,4 +1,4 @@
-%h1 My Profile
+%h1.dashboard My Profile
 
 %h1 Photos
 
@@ -7,10 +7,11 @@
   = image_tag photo.image
   - if photo.location
     = "#{photo.location.latitude} #{photo.location.longitude}"
-  %br
+  %br/
   = link_to "Delete", photo_path(photo), method: :delete
   |
   = link_to "Edit", edit_photo_path(photo)
+  %br/
   %ul
     - photo.memories.each do |memory|
       %li= memory.text
@@ -22,5 +23,4 @@
 
 .dash-unit
   #links.right
-  %p
     = link_to "My Profile", user_path(current_user)

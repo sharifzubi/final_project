@@ -16,4 +16,5 @@
 
 .dash-unit
   #links.right
+  - if current_user == true
     = link_to "Update Profile", edit_user_registration_path
