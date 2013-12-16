@@ -14,56 +14,29 @@ $subheading-weight: 400;
 $main: 'Helvetica', 'Arial', sans-serif;
 $main-weight: normal;
 
-.container {
-  margin: 30px;
-  padding: 30px;
-  // background: blue;
+.container-dash {
+  // margin: 30px;
+  // padding: 30px;
+  background: blue;
 }
 
 #map-canvas {
   height: 400px;
 }
 
-// img {
-//   width: 240px;
-//   height: 200px;
-// }
-
-/*.nav {
-  float: left;
-}*/
-
 .nav-avatar {
   height: 50px;
+  position: relative;
 }
 
 // .row {
 //   float: left;
 // }
 
-h2.dashboard {
-  padding: 5px;
-}
-
-.photos-dash {
-  width: 930px;
-
-  .photo-dash {
-    // width: 300px;
-    // height: 300px;
-    // padding: 10px;
-    display: inline-block;
-  }
-    .img {
-      width: 300px;
-      height: 300px;
-      padding: 10px;
-    }
-}
-
-.img {
-  width: 30px;
-  height: 30px;
-//   // float: left;
+// .img {
+//   width: 33%;
+//   height: 33%;
+//   float: left;
+//   padding: 0px;
 //   display: inline-block;
-}
+// }

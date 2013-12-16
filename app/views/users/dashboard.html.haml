@@ -1,8 +1,8 @@
-%body.dashboard
-  .container
-    %h1.dashboard My Profile
+%body.dash
+  .container-dash
+    %h1 My Profile
     %br/
-    %h2.dashboard Photos
+    %h2 Photos
 
     .photos-dash
       - @photos.each do |photo|
@@ -10,7 +10,7 @@
           .title
             = photo.title
           .image
-            = image_tag(photo.image)
+            = image_tag (photo.image.thumb)
             - if photo.location
               = "#{photo.location.latitude} #{photo.location.longitude}"
           .links

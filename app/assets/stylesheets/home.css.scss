@@ -16,7 +16,7 @@ $main-weight: normal;
 
 .slider {
   /*margin: 10px 0;*/
-  width: 1180px; /* Update to your slider width */
+  width: 1195px; /* Update to your slider width */
   height: 580px; /* Update to your slider height */
   position: relative;
   overflow: hidden;
@@ -29,15 +29,6 @@ $main-weight: normal;
   left: 0;
 }
 
-img {
-  width: 300px;
-  length: 340px;
-}
-
-#photos {
-  display: inline-block;
-}
-
 img.carousel {
   margin: 0px;
   width: 1200px;
@@ -46,47 +37,58 @@ img.carousel {
 
 img.logo {
   float: left;
-  margin: 5px;
-  width: 80px;
-  height: 40px;
+  padding: 10px;
+  width: 120px;
+  height: 80px;
 }
 
 img.nav-avatar {
-  margin: 5px;
-  width: 60px;
-  height: 50px;
+  width: 70px;
+  height: 75px;
+  border: 2px solid white;
 }
 
 .nav {
-  // position:fixed;
+  position:fixed;
   top:0;
   left:0;
   bottom:50px;
   right:0;
-  // z-index:200;
-  height:50px;
-  background:#B8B0B0;
-  border-bottom:1px solid #444;
+  height:75px;
+  background: white;
+  // border-bottom:1px solid #444;
 }
 
 .nav ul.right {
   float: right;
-  margin:0px;
-  // padding:10px;
+  margin-right:1em;
   list-style-type:none;
   font-weight: bold;
 }
 
 .nav ul.left {
   float: left;
-  margin:0px;
+  margin-top: 3px;
   padding:10px;
   list-style-type:none;
   font-weight: bold;
 }
 
-body {
-  background-color: white;
-}
+ul.logged_out {
+  // float: right;
 
+  .sign_up {
+    float: right;
+    padding: 10px;
+    padding-top: 34px;
+    padding-left: 20px;
+    border-bottom: 7px solid #71B9D1;
+  }
+  .sign_in {
+    float: right;
+    padding: 10px;
+    padding-top: 34px;
+    border-bottom: 7px solid #71B9D1;
+  }
+}
 
