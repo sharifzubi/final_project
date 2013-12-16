@@ -15,10 +15,10 @@ class PhotosController < ApplicationController
 
 
   def create
-    response_hash = params[:photo]
-    location_hash = response_hash.delete("location")
+    photo_hash = params[:photo]
+    location_hash = photo_hash.delete("location")
 
-    @photo = Photo.new response_hash
+    @photo = Photo.new photo_hash
     @photo.user_id = current_user.id
     if @photo.save
       location = Location.new location_hash
@@ -48,8 +48,18 @@ class PhotosController < ApplicationController
 
 
   def update
+    photo_hash = params[:photo]
+    location_hash = photo_hash.delete("location")
+
     photo = Photo.find(params[:id])
-    photo.update_attributes(params[:photo])
+    photo.update_attributes(photo_hash)
+
+    if photo.location.nil?
+      location = Location.new(location_hash)
+      location.save
+      photo.location = location
+    end
+
     authorize! :update, photo
     redirect_to dashboard_path
   end

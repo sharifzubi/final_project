@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-      # @photos = @user.photos
+  # @photos = @user.photos
   def dashboard
     if current_user
       @photos = current_user.photos

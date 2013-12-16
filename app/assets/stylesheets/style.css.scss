@@ -45,8 +45,12 @@ h2.dashboard {
   padding: 5px;
 }
 
-.photos {
+.photos-dash {
   width: 100%;
+
+  .photo-dash {
+    display: inline-block;
+  }
 }
 
 .images img {

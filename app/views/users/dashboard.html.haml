@@ -4,27 +4,29 @@
     %br/
     %h2.dashboard Photos
 
-    .photos
+    .photos-dash
       - @photos.each do |photo|
-        .images
-          %h4= photo.title
-          = image_tag photo.image
-          - if photo.location
-            = "#{photo.location.latitude} #{photo.location.longitude}"
-        %br/
-        = link_to "Delete", photo_path(photo), method: :delete
-        |
-        = link_to "Edit", edit_photo_path(photo)
-        %br/
-        %ul
-        - photo.memories.each do |memory|
-          %li= memory.text
-          %br
-          / = link_to "Add Memory", new_photo_memory_path(memory)
-        = photo.location.address unless photo.location.nil?
+        .photo-dash
+          .title
+            = photo.title
+          .image
+            = image_tag(photo.image)
+            - if photo.location
+              = "#{photo.location.latitude} #{photo.location.longitude}"
+          .links
+            = link_to "Delete", photo_path(photo), method: :delete
+            |
+            = link_to "Edit", edit_photo_path(photo)
+          .memories
+            %ul
+              - photo.memories.each do |memory|
+                %li= memory.text
+          .location
+            = photo.location.address unless photo.location.nil?
+            %br/
 
-      = link_to "Add Photo", new_photo_path
-      %br/
+    = link_to "Add Photo", new_photo_path
+    %br/
 
     .dash-unit
       #links.right
