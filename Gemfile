@@ -15,6 +15,8 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'jquery-rails'
 
+gem 'heroku'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
