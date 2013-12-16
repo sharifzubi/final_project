@@ -50,19 +50,21 @@ function initialize() {
 
 
   $.each(window.photos, function(index, item){
-    // var myLatLng = new google.maps.LatLng(item.location.latitude, item.location.longitude);
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-    });
+    if(item.location){
+      var myLatLng = new google.maps.LatLng(item.location.latitude, item.location.longitude);
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+      });
 
-    infowindow2 = new google.maps.InfoWindow({
-      content: "<img src='"+ item.image.image.url+"'>"
-    });
+      infowindow2 = new google.maps.InfoWindow({
+        content: "<img src='"+ item.image.image.url+"'>"
+      });
 
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow2.open(map,marker);
-    });
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow2.open(map,marker);
+      });
+    }
   })
   var marker = new google.maps.Marker({
     position: myLatLng,
