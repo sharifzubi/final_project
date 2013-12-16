@@ -1,3 +1,19 @@
+$chelsea-blue       : #0004FF;
+$blue-mid           : #566E9C;
+$blue-light         : #71B9D1;
+$black              : #000000;
+$black-light        : #16262B;
+$grey_dark          : #303233;
+$grey_mid           : #212323;
+$grey_light         : #ABC4CA;
+
+$heading : 'Droid Sans Mono', 'Helvetica', 'Arial', sans-serif;
+$heading-weight : 'Normal 400';
+$subheading : 'Roboto', 'Droid Sans', 'Helvetica', 'Arial', sans-serif;
+$subheading-weight: 400;
+$main: 'Helvetica', 'Arial', sans-serif;
+$main-weight: normal;
+
 .slider {
   /*margin: 10px 0;*/
   width: 1180px; /* Update to your slider width */
@@ -13,6 +29,15 @@
   left: 0;
 }
 
+img {
+  width: 300px;
+  length: 340px;
+}
+
+#photos {
+  display: inline-block;
+}
+
 img.carousel {
   margin: 0px;
   width: 1200px;
@@ -26,22 +51,28 @@ img.logo {
   height: 40px;
 }
 
-.nav{
-  position:fixed;
+img.nav-avatar {
+  margin: 5px;
+  width: 60px;
+  height: 50px;
+}
+
+.nav {
+  // position:fixed;
   top:0;
   left:0;
   bottom:50px;
   right:0;
-  z-index:200;
+  // z-index:200;
   height:50px;
-  // background:#000;
+  background:#B8B0B0;
   border-bottom:1px solid #444;
 }
 
 .nav ul.right {
   float: right;
   margin:0px;
-  padding:10px;
+  // padding:10px;
   list-style-type:none;
   font-weight: bold;
 }
@@ -53,10 +84,6 @@ img.logo {
   list-style-type:none;
   font-weight: bold;
 }
-
-// h1.dashboard {
-//   float: left;
-// }
 
 body {
   background-color: white;

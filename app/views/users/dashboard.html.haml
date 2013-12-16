@@ -1,26 +1,29 @@
-%h1.dashboard My Profile
+%body.dashboard
+  .container
+    %h1.dashboard My Profile
+    %br/
+    %h2.dashboard Photos
 
-%h1 Photos
+    #div.photos
+      - @photos.each do |photo|
+        %h4= photo.title
+        = image_tag photo.image
+        - if photo.location
+          = "#{photo.location.latitude} #{photo.location.longitude}"
+        %br/
+        = link_to "Delete", photo_path(photo), method: :delete
+        |
+        = link_to "Edit", edit_photo_path(photo)
+        %br/
+        %ul
+          - photo.memories.each do |memory|
+            %li= memory.text
+            %br
+            / = link_to "Add Memory", new_photo_memory_path(memory)
 
-- @photos.each do |photo|
-  %h3= photo.title
-  = image_tag photo.image
-  - if photo.location
-    = "#{photo.location.latitude} #{photo.location.longitude}"
-  %br/
-  = link_to "Delete", photo_path(photo), method: :delete
-  |
-  = link_to "Edit", edit_photo_path(photo)
-  %br/
-  %ul
-    - photo.memories.each do |memory|
-      %li= memory.text
-      %br
-      / = link_to "Add Memory", new_photo_memory_path(memory)
+      = link_to "Add Photo", new_photo_path
+      %br/
 
-= link_to "Add Photo", new_photo_path
-%br/
-
-.dash-unit
-  #links.right
-    = link_to "My Profile", user_path(current_user)
+    .dash-unit
+      #links.right
+        = link_to "My Profile", user_path(current_user)

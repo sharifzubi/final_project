@@ -9,8 +9,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
 
-  %body
-    .container
+    %body
       %nav.nav
         %img.logo{src: "/images/cameralogo.jpg"}
 
@@ -31,5 +30,5 @@
             |
             = link_to 'Sign In', new_user_session_path
 
-        = yield
+    = yield
 

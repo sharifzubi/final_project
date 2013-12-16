@@ -1,10 +1,33 @@
+$chelsea-blue       : #0004FF;
+$blue-mid           : #566E9C;
+$blue-light         : #71B9D1;
+$black              : #000000;
+$black-light        : #16262B;
+$grey_dark          : #303233;
+$grey_mid           : #212323;
+$grey_light         : #ABC4CA;
+
+$heading : 'Droid Sans Mono', 'Helvetica', 'Arial', sans-serif;
+$heading-weight : 'Normal 400';
+$subheading : 'Roboto', 'Droid Sans', 'Helvetica', 'Arial', sans-serif;
+$subheading-weight: 400;
+$main: 'Helvetica', 'Arial', sans-serif;
+$main-weight: normal;
+
+.container {
+  margin: 30px;
+  padding: 30px;
+  // background: blue;
+}
+
 #map-canvas {
   height: 400px;
 }
 
-img {
-
-}
+// img {
+//   width: 240px;
+//   height: 200px;
+// }
 
 /*.nav {
   float: left;
@@ -12,4 +35,18 @@ img {
 
 .nav-avatar {
   height: 50px;
+}
+
+// .row {
+//   float: left;
+// }
+
+h2.dashboard {
+  padding: 5px;
+}
+
+div .photos {
+  width: 300px;
+  length: 340px;
+  display: inline-block;
 }
