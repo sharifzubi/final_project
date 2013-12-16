@@ -49,18 +49,18 @@ function showWindow(marker, string){
 
 function initialize() {
 
-  var myLatLng = new google.maps.LatLng(51.489296, -0.176217);
+  var myLatLng = new google.maps.LatLng(51.481383, -0.109863);
+  // var myLatLng = new google.maps.LatLng(51.489296, -0.176217);
 
   var mapOptions = {
     center: myLatLng,
-    zoom: 12
+    zoom: 6
   };
 
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
 
   $.each(window.photos, function(index, item){
-    console.log(item.location)
     if(item.location){
       var myLatLng = new google.maps.LatLng(item.location.latitude, item.location.longitude);
       var marker = new google.maps.Marker({
@@ -68,22 +68,20 @@ function initialize() {
         map: map,
       });
 
-
-
       google.maps.event.addListener(marker, 'click', function() {
         string = "<img src='"+ item.image.image.url+"'>"
         showWindow(marker, string)
       });
     }
   })
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map
-  });
+  // var marker = new google.maps.Marker({
+  //   position: myLatLng,
+  //   map: map
+  // });
 
-  window.infowindow = new google.maps.InfoWindow({
-    content: "<img src='http://qph.is.quoracdn.net/main-thumb-4365810-200-EgT8jiCiHhRsTmqorq48g7p56aJ22myG.jpeg'>"
-  });
+  // window.infowindow = new google.maps.InfoWindow({
+  //   content: "<img src='http://qph.is.quoracdn.net/main-thumb-4365810-200-EgT8jiCiHhRsTmqorq48g7p56aJ22myG.jpeg'>"
+  // });
 
   // AUTOCOMPLETE
   init_autocomplete(map, marker)
