@@ -1,7 +1,7 @@
 class CreateLocations < ActiveRecord::Migration
   def change
     create_table :locations do |t|
-      t.string :name
+      t.string :address
       t.string :longitude
       t.string :latitude
       t.integer :photo_id

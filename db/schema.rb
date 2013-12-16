@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20131209110152) do
 
   create_table "locations", :force => true do |t|
-    t.string   "name"
+    t.string   "address"
     t.string   "longitude"
     t.string   "latitude"
     t.integer  "photo_id"

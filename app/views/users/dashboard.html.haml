@@ -6,7 +6,7 @@
 
     .photos
       - @photos.each do |photo|
-        .image_div
+        .images
           %h4= photo.title
           = image_tag photo.image
           - if photo.location

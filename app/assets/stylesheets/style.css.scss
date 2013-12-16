@@ -46,11 +46,11 @@ h2.dashboard {
 }
 
 .photos {
-  display: inline-block;
+  width: 100%;
 }
 
-.image_div {
-  width: 300px;
-  length: 340px;
-  // display: inline-block;
+.images img {
+  width: 32%;
+  // float: left;
+  display: inline-block;
 }
