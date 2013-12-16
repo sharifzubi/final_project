@@ -1,3 +1,5 @@
+var map;
+
 init_autocomplete = function(map, marker){
   var input = document.getElementById("autocomplete");
 
@@ -37,6 +39,14 @@ init_autocomplete = function(map, marker){
 
 
 
+function showWindow(marker, string){
+  var infowindow = new google.maps.InfoWindow({
+    content: string
+  });
+  infowindow.open(map,marker);
+}
+
+
 function initialize() {
 
   var myLatLng = new google.maps.LatLng(51.489296, -0.176217);
@@ -46,10 +56,11 @@ function initialize() {
     zoom: 12
   };
 
-  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
 
   $.each(window.photos, function(index, item){
+    console.log(item.location)
     if(item.location){
       var myLatLng = new google.maps.LatLng(item.location.latitude, item.location.longitude);
       var marker = new google.maps.Marker({
@@ -57,12 +68,11 @@ function initialize() {
         map: map,
       });
 
-      infowindow2 = new google.maps.InfoWindow({
-        content: "<img src='"+ item.image.image.url+"'>"
-      });
+
 
       google.maps.event.addListener(marker, 'click', function() {
-        infowindow2.open(map,marker);
+        string = "<img src='"+ item.image.image.url+"'>"
+        showWindow(marker, string)
       });
     }
   })
