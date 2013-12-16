@@ -11,8 +11,14 @@
 
   .field
     = f.fields_for :memories do |f|
-      = f.label :text
+      = f.label :memory
       = f.text_field :text
     %br/
 
-    = f.submit class: "btn btn-primary"
+  .field
+    = f.fields_for :location do |f|
+      = f.label :address
+      = f.text_field :address
+    %br
+
+  = f.submit class: "btn btn-primary"

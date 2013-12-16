@@ -9,14 +9,22 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
     @photo.memories.build
+    @photo.location
     authorize! :new, @photo
   end
 
 
   def create
-    @photo = Photo.new params[:photo]
+    response_hash = params[:photo]
+    location_hash = response_hash.delete("location")
+
+    @photo = Photo.new response_hash
     @photo.user_id = current_user.id
     if @photo.save
+      location = Location.new location_hash
+      location.save
+      @photo.location = location
+
       session[:photo_id] = @photo.id
       redirect_to dashboard_path
     else

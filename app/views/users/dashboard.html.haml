@@ -21,6 +21,7 @@
           %li= memory.text
           %br
           / = link_to "Add Memory", new_photo_memory_path(memory)
+        = photo.location.address unless photo.location.nil?
 
       = link_to "Add Photo", new_photo_path
       %br/
