@@ -26,10 +26,11 @@
               / = "Logged in as #{current_user.first_name}"
               = link_to 'Logout?',  destroy_user_session_path, method: :delete
         - else
-          %ul.logged_out
-            .sign_up
+          %ul
+          .nav-links
+            .link.sign_up
               = link_to 'Sign Up', new_user_registration_path, {:class => 'sign-up-link'}
-            .sign_in
+            .link.sign_in
               = link_to 'Sign In', new_user_session_path
 
     = yield

@@ -3,3 +3,8 @@
 // }, function() {
 //   $(this).removeClass("blue");
 // });
+
+
+jQuery(function() {
+  $(".image").fancybox();
+});

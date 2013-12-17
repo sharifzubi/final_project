@@ -28,6 +28,7 @@ $main-weight: normal;
 .nav-avatar {
   height: 50px;
   position: relative;
+  // border-radius: 30%;
 }
 
 
@@ -39,6 +40,13 @@ img {
 .journey {
   text-align: center;
   padding: 10px;
+}
+
+.photos-dash {
+  .photo-dash {
+    display: inline-block;
+    margin-left: 20px;
+  }
 }
 
 // .img {

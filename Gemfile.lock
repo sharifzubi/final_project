@@ -56,6 +56,8 @@ GEM
     erubis (2.7.0)
     excon (0.25.3)
     execjs (2.0.2)
+    fancybox2-rails (0.2.5)
+      railties (>= 3.1.0)
     geocoder (1.1.8)
     haml (4.0.4)
       tilt
@@ -168,6 +170,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.2.1)
   devise
+  fancybox2-rails (~> 0.2.4)
   geocoder
   haml-rails
   heroku

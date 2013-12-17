@@ -9,10 +9,10 @@
         .photo-dash
           .title
             = photo.title
-          .image
-            = image_tag (photo.image.thumb)
+          = link_to photo.image_url, class: 'image' do
+            = image_tag photo.image_url(:thumb)
             - if photo.location
-              = "#{photo.location.latitude} #{photo.location.longitude}"
+              / = "#{photo.location.latitude} #{photo.location.longitude}"
           .links
             = link_to "Delete", photo_path(photo), method: :delete
             |
