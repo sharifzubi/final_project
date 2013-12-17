@@ -1,17 +1,18 @@
 !!!
 %html
-  %head
-    %h1 My Journey through London
 
-  %h2.journey Liiife, in photos
-  #map-canvas
+%body.jour
+  .container-jour
+    %h1.journey-header Liiife, in photos
 
-  %h3 AUTOCOMPLETE
+    #map-canvas
 
-  :javascript
-    window.photos = #{@photos.to_json}
+    %h3 AUTOCOMPLETE
 
-  %form#places_form
-    .row{role: "search"}
-  %input#autocomplete
-    .form-control{placholder: "search", type: "text"}
+    :javascript
+      window.photos = #{@photos.to_json}
+
+    %form#places_form
+      .row{role: "search"}
+    %input#autocomplete
+      .form-control{placholder: "search", type: "text"}

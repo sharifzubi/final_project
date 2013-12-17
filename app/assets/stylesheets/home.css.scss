@@ -1,6 +1,7 @@
 $chelsea-blue       : #0004FF;
 $blue-mid           : #566E9C;
 $blue-light         : #71B9D1;
+$blue-in-use        : #4791D1;
 $black              : #000000;
 $black-light        : #16262B;
 $grey_dark          : #303233;
@@ -15,7 +16,6 @@ $main: 'Helvetica', 'Arial', sans-serif;
 $main-weight: normal;
 
 .slider {
-  /*margin: 10px 0;*/
   width: 100%; /* Update to your slider width */
   height: 600px; /* Update to your slider height */
   position: relative;
@@ -39,8 +39,8 @@ img.carousel {
 img.logo {
   float: left;
   padding: 10px;
-  width: 120px;
-  height: 80px;
+  width: 130px;
+  height: 90px;
 }
 
 img.nav-avatar {
@@ -71,7 +71,7 @@ img.nav-avatar {
 .nav ul.left {
   float: left;
   margin-top: 3px;
-  padding:10px;
+  // padding:10px;
   list-style-type:none;
   font-weight: bold;
 }
@@ -91,14 +91,13 @@ img.nav-avatar {
   padding-right: 22px;
   padding-bottom: 15px;
   padding-top: 15px;
-  border-radius: 40px;
   border-left: 8px;
   margin-top: 8px;
   position: relative;
-  background: #727272;
-  -moz-box-shadow:    0px 0px 25px 10px #5DA09A;
-  -webkit-box-shadow: 0px 0px 25px 10px #5DA09A;
-  box-shadow:         0px 0px 25px 10px #5DA09A;
+  background: white;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Droid Sans Mono;
 }
 .sign_in {
   float: right;
@@ -107,12 +106,41 @@ img.nav-avatar {
   padding-right: 22px;
   padding-bottom: 15px;
   padding-top: 15px;
-  border-radius: 40px;
   margin-top: 8px;
   position: relative;
-  background: #727272;
-  -moz-box-shadow:    0px 0px 25px 10px #5DA09A;
-  -webkit-box-shadow: 0px 0px 25px 10px #5DA09A;
-  box-shadow:         0px 0px 25px 10px #5DA09A;
+  background: white;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Droid Sans Mono;
 }
 
+
+.dashboard {
+  float: left;
+  padding-right: 40px;
+  padding-top: 32px;
+  margin-top: 0;
+  position: static;
+  background: white;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Droid Sans Mono;
+}
+
+.journey {
+  float: left;
+  padding-left: 25px;
+  padding-top: 30px;
+  margin-top: 0;
+  position: static;
+  background: white;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Droid Sans Mono;
+}
+
+
+.logout {
+  padding-left: 6px;
+  color: #0004FF;
+}

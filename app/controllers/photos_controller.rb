@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
     @photo.memories.build
-    @photo.location
+    @photo.build_location
     authorize! :new, @photo
   end
 
@@ -22,9 +22,9 @@ class PhotosController < ApplicationController
     @photo.user_id = current_user.id
     if @photo.save
       location = Location.new location_hash
-      location.save
+      # location.save
       @photo.location = location
-
+      location.save
       session[:photo_id] = @photo.id
       redirect_to dashboard_path
     else

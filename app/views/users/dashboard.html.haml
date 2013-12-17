@@ -9,10 +9,11 @@
         .photo-dash
           .title
             = photo.title
-          = link_to photo.image_url, class: 'image' do
-            = image_tag photo.image_url(:thumb)
-            - if photo.location
-              / = "#{photo.location.latitude} #{photo.location.longitude}"
+          .picture
+            = link_to photo.image_url, class: 'image' do
+              = image_tag photo.image_url(:thumb)
+              - if photo.location
+                / = "#{photo.location.latitude} #{photo.location.longitude}"
           .links
             = link_to "Delete", photo_path(photo), method: :delete
             |
@@ -25,9 +26,9 @@
             = photo.location.address unless photo.location.nil?
             %br/
 
-    = link_to "Add Photo", new_photo_path
-    %br/
-
-    .dash-unit
-      #links.right
+    #dashboard-links
+      .photo-add-link
+        = link_to "Add Photo", new_photo_path
+        %br/
+      .user-profile-link
         = link_to "My Profile", user_path(current_user)

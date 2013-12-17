@@ -15,9 +15,7 @@ $main: 'Helvetica', 'Arial', sans-serif;
 $main-weight: normal;
 
 .container-dash {
-  // margin: 30px;
-  // padding: 30px;
-  background: blue;
+  background: aliceblue;
 }
 
 #map-canvas {
@@ -31,29 +29,64 @@ $main-weight: normal;
   // border-radius: 30%;
 }
 
-
 img {
-  width: 300px;
-  height: 200px;
+  width: 320px;
+  height: 250px;
 }
 
-.journey {
-  text-align: center;
-  padding: 10px;
-}
+// DASHBOARD
 
 .photos-dash {
+  text-align: center;
   .photo-dash {
     display: inline-block;
     margin-left: 20px;
+    border-image: 50px white;
+    font-weight: bold;
+  }
+  .picture {
+    border: 10px solid #4791D1;
   }
 }
 
-// .img {
-//   width: 33%;
-//   height: 33%;
-//   float: left;
-//   padding: 0px;
-//   display: inline-block;
-// }
+#dashboard-links {
+  float: left;
 
+  .photo-add-link {
+    display: inline-block;
+    padding: 7px 11px;
+    // padding-left: 11px;
+    // padding-right: 11px;
+    // padding-bottom: 7px;
+    // padding-top: 7px;
+    margin-top: 8px 0;
+    position: relative;
+    background: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Droid Sans Mono;
+  }
+
+  .user-profile-link {
+    display: inline-block;
+    padding: 7px 11px;
+    float: left;
+    margin-top: 8px 0;
+    position: relative;
+    background: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Droid Sans Mono;
+  }
+}
+
+// JOURNEY
+.journey-header {
+  text-align: center;
+}
+
+.container-jour {
+  background: aliceblue;
+}
