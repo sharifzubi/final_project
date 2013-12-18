@@ -18,6 +18,11 @@ $main-weight: normal;
   background: aliceblue;
 }
 
+body {
+  font-family: 'Nixie One', verdana;
+}
+
+
 #map-canvas {
   height: 450px;
   border: 7px solid #71B9D1;
@@ -65,7 +70,7 @@ img {
     background-color: black;
     font-weight: bold;
     font-size: 17px;
-    font-family: Droid Sans Mono;
+
   }
 
   .user-profile-link {
@@ -78,7 +83,7 @@ img {
     background-color: black;
     font-weight: bold;
     font-size: 17px;
-    font-family: Droid Sans Mono;
+
   }
 }
 
@@ -89,4 +94,60 @@ img {
 
 .container-jour {
   background: aliceblue;
+}
+
+
+// USERS ALL
+
+.photos-users-index {
+  text-align: center;
+  .photo-users-index {
+    display: inline-block;
+    margin-left: 20px;
+    border-image: 50px white;
+    font-weight: bold;
+  }
+  .user-avatar {
+    border: 10px solid #4791D1;
+  }
+}
+
+
+// USER SHOW PAGE
+
+.users-show {
+  border-left: 10px solid #4791D1;
+  border-right: 10px solid #4791D1;
+
+  .user-show-username {
+    border-bottom: 2px solid #4791D1;
+    text-align: center;
+  }
+
+  .user-show-name {
+    font-size: 22px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .user-show-avatar {
+    padding-left: 20px;
+  }
+  .user-show-right {
+    // float: right;
+  }
+  .user-show-location {
+    padding: 20px;
+  }
+  .user-show-aboutme {
+    padding: 20px;
+  }
+  .user-profile-link {
+    text-align: center;
+    padding: 7px 11px;
+    position: relative;
+    background-color: black;
+    font-size: 17px;
+
+  }
 }
