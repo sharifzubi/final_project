@@ -21,10 +21,6 @@ class PhotosController < ApplicationController
     @photo = Photo.new photo_hash
     @photo.user_id = current_user.id
     if @photo.save
-      location = Location.new location_hash
-      # location.save
-      @photo.location = location
-      location.save
       session[:photo_id] = @photo.id
       redirect_to dashboard_path
     else
