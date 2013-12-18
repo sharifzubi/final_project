@@ -40,16 +40,26 @@ img {
 // DASHBOARD
 
 .photos-dash {
+  margin: 0 auto;
   text-align: center;
+
   .photo-dash {
-    display: inline-block;
-    margin-left: 20px;
-    border-image: 50px white;
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    padding-left: 10px;
     font-weight: bold;
+
+    .picture {
+      border: 10px solid #4791D1;
+
+      img {
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
-  .picture {
-    border: 10px solid #4791D1;
-  }
+
 }
 
 #dashboard-links {
