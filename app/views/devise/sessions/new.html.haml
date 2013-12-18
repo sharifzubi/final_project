@@ -1,6 +1,13 @@
+:css
+  body {
+    background: url("/images/photography/piccadilly_tube.jpg");
+    background-size: cover;
+  }
+
 #sign-in
   .sign-in-box
-    %h2 Sign in
+    .sign-in-title
+      %h2 LOGIN
 
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
       .form-group

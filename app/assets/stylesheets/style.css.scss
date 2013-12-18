@@ -7,12 +7,6 @@ $grey_dark          : #303233;
 $grey_mid           : #212323;
 $grey_light         : #ABC4CA;
 
-$heading : 'Droid Sans Mono', 'Helvetica', 'Arial', sans-serif;
-$heading-weight : 'Normal 400';
-$subheading : 'Roboto', 'Droid Sans', 'Helvetica', 'Arial', sans-serif;
-$subheading-weight: 400;
-$main: 'Helvetica', 'Arial', sans-serif;
-$main-weight: normal;
 
 .container-dash {
   background: aliceblue;
@@ -22,6 +16,10 @@ body {
   font-family: 'Nixie One', verdana;
 }
 
+a:hover {
+  opacity: 0.4;
+  color: #000;
+}
 
 #map-canvas {
   height: 450px;
