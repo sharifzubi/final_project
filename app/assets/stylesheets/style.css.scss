@@ -90,3 +90,19 @@ img {
 .container-jour {
   background: aliceblue;
 }
+
+
+// USERS ALL
+
+.photos-users-index {
+  text-align: center;
+  .photo-users-index {
+    display: inline-block;
+    margin-left: 20px;
+    border-image: 50px white;
+    font-weight: bold;
+  }
+  .user-avatar {
+    border: 10px solid #4791D1;
+  }
+}
