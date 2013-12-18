@@ -106,3 +106,31 @@ img {
     border: 10px solid #4791D1;
   }
 }
+
+
+// USER SHOW PAGE
+
+.users-show {
+  border: 10px solid #4791D1;
+
+  .user-show-username {
+    border-bottom: 2px solid #4791D1;
+    text-align: center;
+  }
+
+  .user-show-name {
+    font-size: 22px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .user-show-avatar {
+    padding-left: 20px;
+  }
+  .user-show-location {
+    padding: 20px;
+  }
+  .user-show-aboutme {
+    padding: 20px;
+  }
+}
