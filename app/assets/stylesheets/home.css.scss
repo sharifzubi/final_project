@@ -98,7 +98,7 @@ img.nav-avatar {
   background: white;
   font-weight: bold;
   font-size: 18px;
-  font-family: Droid Sans Mono;
+
 }
 .sign_in {
   float: right;
@@ -112,11 +112,11 @@ img.nav-avatar {
   background: white;
   font-weight: bold;
   font-size: 18px;
-  font-family: Droid Sans Mono;
+
 }
 
 
-.dashboard {
+.link-style {
   float: left;
   padding-right: 40px;
   padding-top: 32px;
@@ -125,23 +125,25 @@ img.nav-avatar {
   background: white;
   font-weight: bold;
   font-size: 25px;
-  font-family: Droid Sans Mono;
+  font-weight: 300;
 }
 
-.journey {
-  float: left;
-  padding-left: 25px;
-  padding-top: 30px;
-  margin-top: 0;
-  position: static;
-  background: white;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: Droid Sans Mono;
-}
+// .journey {
+//   float: left;
+//   padding-left: 25px;
+//   padding-top: 30px;
+//   margin-top: 0;
+//   position: static;
+//   background: white;
+//   font-weight: bold;
+//   font-size: 25px;
+//   font-weight: 300;
+
+// }
 
 
 .logout {
   padding-left: 6px;
   color: #0004FF;
+  font-weight: 200;
 }

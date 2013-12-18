@@ -6,6 +6,8 @@
     / %script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
     %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCyjPnob22nV_GJZJqiiuUGR-DvSaPq5vI&sensor=false&libraries=places"}
 
+    %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600', rel: 'stylesheet', type: 'text/css'}/
+
     = javascript_include_tag "application"
     = csrf_meta_tags
 
@@ -18,9 +20,9 @@
         - if user_signed_in?
           %logged_in
             %ul.left
-              .link.dashboard
+              .link.dashboard.link-style
                 = link_to 'DASHBOARD', dashboard_path
-              .link.journey
+              .link.journey.link-style
                 = link_to 'JOURNEY', journey_path
             %ul.right
               .link.avatar

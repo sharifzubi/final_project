@@ -10,15 +10,17 @@
           %b= @user.last_name
       .user-show-avatar
         = image_tag @user.avatar
-      .user-show-location
-        %p
-          %b Favourite Location:
-          = @user.favourite_location
-      .user-show-aboutme
-        %p
-          %b About Me:
-          = @user.about_me
 
-    .user-show-update-link
+      .user-show-right
+        .user-show-location
+          %p
+            %b Favourite Location:
+            = @user.favourite_location
+        .user-show-aboutme
+          %p
+            %b About Me:
+            = @user.about_me
+
       - if current_user # if current user LOGGED IN, then show...
-        = link_to "Update Profile", edit_user_registration_path
+        .user-profile-link
+          = link_to "Update Profile", edit_user_registration_path
