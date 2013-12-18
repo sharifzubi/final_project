@@ -4,28 +4,28 @@
     %br/
     %h2 Photos
 
-    .photos-dash.col-md-12
-      - @photos.each do |photo|
-        .photo-dash.col-md-4
-          .title
-            = photo.title
-          .picture
-            = link_to photo.image_url, class: 'image' do
-              = image_tag photo.image_url(:thumb), class: "col-md-12"
-              - if photo.location
-                / = "#{photo.location.latitude} #{photo.location.longitude}"
-            .clearfix
-          .links
-            = link_to "Delete", photo_path(photo), method: :delete
-            |
-            = link_to "Edit", edit_photo_path(photo)
-          .memories
-            %ul
-              - photo.memories.each do |memory|
-                %li= memory.text
-          .location
-            = photo.location.address unless photo.location.nil?
-      .clearfix
+    .dash-everything
+      .photos-dash.col-md-12
+        - if @photos.present?
+          - @photos.each do |photo|
+            .photo-dash.col-md-4
+              .title
+                = photo.title
+              .picture
+                = link_to photo.image_url, class: 'image' do
+                  = image_tag photo.image_url(:thumb), class: "col-md-12"
+                .clearfix
+              .links
+                = link_to "Delete", photo_path(photo), method: :delete
+                |
+                = link_to "Edit", edit_photo_path(photo)
+              .memories
+                %ul
+                  - photo.memories.each do |memory|
+                    %li= memory.text
+              .location
+                = photo.location.address unless photo.location.nil?
+          .clearfix
 
     #dashboard-links
       .photo-add-link

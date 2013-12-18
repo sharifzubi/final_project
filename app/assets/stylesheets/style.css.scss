@@ -6,6 +6,7 @@ $black-light        : #16262B;
 $grey_dark          : #303233;
 $grey_mid           : #212323;
 $grey_light         : #ABC4CA;
+$main               : #4791D1;
 
 
 .container-dash {
@@ -124,8 +125,8 @@ img {
 // USER SHOW PAGE
 
 .users-show {
-  border-left: 10px solid #4791D1;
-  border-right: 10px solid #4791D1;
+  // border-left: 3px solid #4791D1;
+  // border-right: 3px solid #4791D1;
 
   .user-show-username {
     border-bottom: 2px solid #4791D1;

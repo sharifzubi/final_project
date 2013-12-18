@@ -25,10 +25,11 @@
               .link.journey.link-style
                 = link_to 'JOURNEY', journey_path
             %ul.right
-              .link.avatar
-                = image_tag current_user.avatar, {:class => 'nav-avatar'}
-              .link.logout
-                = link_to 'LOGOUT',  destroy_user_session_path, method: :delete
+              =link_to current_user do
+                .link.avatar
+                  = image_tag current_user.avatar, {:class => 'nav-avatar'}
+                .link.logout
+                  = link_to 'LOGOUT',  destroy_user_session_path, method: :delete
         - else
           %ul
           .nav-links
