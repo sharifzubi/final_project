@@ -36,6 +36,7 @@ a:hover {
 img {
   width: 320px;
   height: 250px;
+  // border: 7px solid;
 }
 
 // DASHBOARD
@@ -52,7 +53,7 @@ img {
     font-weight: bold;
 
     .picture {
-      border: 10px solid #4791D1;
+      border: 0px solid #4791D1;
 
       img {
         margin: 0;
@@ -128,6 +129,9 @@ img {
   // border-left: 3px solid #4791D1;
   // border-right: 3px solid #4791D1;
 
+  .row {
+    padding-bottom: 80px;
+  }
   .user-show-username {
     border-bottom: 2px solid #4791D1;
     text-align: center;
@@ -140,10 +144,16 @@ img {
   }
 
   .user-show-avatar {
-    padding-left: 20px;
+    padding-left: 10px;
+    // border: 2px solid;
   }
   .user-show-right {
-    // float: right;
+    padding-left: 50px;
+    padding-top: 65px;
+  }
+  .user-show-left {
+    // padding-left: 50px;
+    // padding-top: 65px;
   }
   .user-show-location {
     padding: 20px;
@@ -191,4 +201,19 @@ img {
   .photo-location {
     padding-bottom: 25px;
   }
+}
+
+// EXTRAS
+
+ul {
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  padding-right: 40px;
+}
+
+.links {
+  text-align: center;
+  padding-right: 14px;
 }
