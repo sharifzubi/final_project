@@ -53,7 +53,7 @@ img {
     font-weight: bold;
 
     .picture {
-      border: 0px solid #4791D1;
+      border: 5px solid #4791D1;
 
       img {
         margin: 0;
@@ -61,41 +61,44 @@ img {
       }
     }
   }
+  .add_photo_box {
+    width: 350px;
+    height: 260px;
+    background: aliceblue;
+    color: white;
+    font-size: 10em;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-left: 10px;
+    font-weight: bold;
+    padding: 0;
+    padding-left: 10px;
+  }
 
 }
 
 #dashboard-links {
-  float: left;
+  background: aliceblue;
 
   .photo-add-link {
     display: inline-block;
     padding: 7px 11px;
-    // padding-left: 11px;
-    // padding-right: 11px;
-    // padding-bottom: 7px;
-    // padding-top: 7px;
     margin-top: 8px 0;
     position: relative;
     background: white;
     background-color: black;
     font-weight: bold;
     font-size: 17px;
-
-  }
-
-  .user-profile-link {
-    display: inline-block;
-    padding: 7px 11px;
-    float: left;
-    margin-top: 8px 0;
-    position: relative;
-    background: white;
-    background-color: black;
-    font-weight: bold;
-    font-size: 17px;
-
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    // margin-bottom: 20px;
   }
 }
+
+
 
 // JOURNEY
 .journey-header {
@@ -104,6 +107,15 @@ img {
 
 .container-jour {
   background: aliceblue;
+}
+
+#autocomplete {
+  // color: #0004FF;
+  width: 525px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 70px;
+  text-align: center;
 }
 
 

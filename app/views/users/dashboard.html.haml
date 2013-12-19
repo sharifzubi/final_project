@@ -24,11 +24,9 @@
               .location
                 = photo.location.address unless photo.location.nil?
                 / = "Location: #{photo.location.address}" unless photo.location.nil?
+          .col-md-4.add_photo_box= link_to "+", new_photo_path
           .clearfix
 
     #dashboard-links
       .photo-add-link
-        = link_to "Add Photo", new_photo_path
-        %br/
-      .user-profile-link
-        = link_to "My Profile", user_path(current_user)
+        / = link_to "Add Photo", new_photo_path

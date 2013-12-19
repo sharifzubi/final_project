@@ -5,14 +5,12 @@
   .container-jour
     %h1.journey-header Liiife, in photos
 
-    #map-canvas
-
-    %h4 Search Box
-
-    :javascript
-      window.photos = #{@photos.to_json}
-
     %form#places_form
       .row{role: "search"}
     %input#autocomplete
-      .form-control{placholder: "search", type: "text"}
+      .form{placholder: "search", type: "text"}
+
+    #map-canvas
+
+    :javascript
+      window.photos = #{@photos.to_json}
