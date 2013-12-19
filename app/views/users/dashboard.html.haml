@@ -22,3 +22,7 @@
             = "Location: #{photo.location.address}" unless photo.location.nil?
       .col-md-4.add_photo_box= link_to "+", new_photo_path
       .clearfix
+
+    - else
+      .col-md-4.add_photo_box= link_to "+", new_photo_path
+      .clearfix

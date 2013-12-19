@@ -8,6 +8,9 @@ $grey_mid           : #212323;
 $grey_light         : #ABC4CA;
 $main               : #4791D1;
 
+html, body {
+  height: 100%;
+}
 
 body {
   font-family: 'Nixie One', verdana;
@@ -19,7 +22,7 @@ a:hover {
 }
 
 #map-canvas {
-  height: 450px;
+  height: 90%;
   border: 7px solid #71B9D1;
 }
 
@@ -101,11 +104,17 @@ img {
 }
 
 .container-jour {
+  height: 80%;
   background: aliceblue;
+}
+
+#places_form {
+  // height: 5%;
 }
 
 #autocomplete {
   // color: #0004FF;
+  height: 9%;
   width: 525px;
   margin-top: 10px;
   margin-bottom: 15px;

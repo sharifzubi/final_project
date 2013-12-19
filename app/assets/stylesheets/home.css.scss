@@ -54,7 +54,7 @@ img.nav-avatar {
   left:0;
   bottom:50px;
   right:0;
-  height:75px;
+  height:15%;
   background: white;
   // border-bottom:1px solid #444;
 }
@@ -67,8 +67,10 @@ img.nav-avatar {
 }
 
 .nav ul.left {
+  height: 100%;
+  line-height: 100%;
+  margin-top: 0;
   float: left;
-  margin-top: 3px;
   // padding:10px;
   list-style-type:none;
   font-weight: bold;
