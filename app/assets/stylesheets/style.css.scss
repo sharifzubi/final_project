@@ -9,10 +9,6 @@ $grey_light         : #ABC4CA;
 $main               : #4791D1;
 
 
-.container-dash {
-  background: aliceblue;
-}
-
 body {
   font-family: 'Nixie One', verdana;
 }
@@ -44,6 +40,8 @@ img {
 .photos-dash {
   margin: 0 auto;
   text-align: center;
+  background: aliceblue;
+  padding-top: 25px;
 
   .photo-dash {
     margin: 0;
@@ -79,23 +77,20 @@ img {
 
 }
 
-#dashboard-links {
-  background: aliceblue;
 
-  .photo-add-link {
-    display: inline-block;
-    padding: 7px 11px;
-    margin-top: 8px 0;
-    position: relative;
-    background: white;
-    background-color: black;
-    font-weight: bold;
-    font-size: 17px;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 20px;
-    // margin-bottom: 20px;
-  }
+.photo-add-link {
+  display: inline-block;
+  padding: 7px 11px;
+  margin-top: 8px 0;
+  position: relative;
+  background: white;
+  background-color: aliceblue;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  // margin-bottom: 20px;
 }
 
 
@@ -226,6 +221,6 @@ ul {
 }
 
 .links {
-  text-align: center;
+  text-align: right;
   padding-right: 14px;
 }
