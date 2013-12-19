@@ -1,24 +1,25 @@
-= form_for(@photo) do |f|
-  .field
-    = f.label :title
-    = f.text_field :title
-    %br/
+#photos-form
+  = form_for(@photo) do |f|
+    .photo-text
+      = f.label :title
+      = f.text_field :title
+      %br/
 
-  .field
-    = f.label :image
-    = f.file_field :image
-    %br/
+    .photo-image
+      = f.label :image
+      = f.file_field :image
+      %br/
 
-  .field
-    = f.fields_for :memories do |f|
-      = f.label :memory
-      = f.text_field :text
-    %br/
+    .photo-memory
+      = f.fields_for :memories do |f|
+        = f.label :memory
+        = f.text_field :text
+      %br/
 
-  .field
-    = f.fields_for :location do |f|
-      = f.label :address
-      = f.text_field :address
-    %br
-
-  = f.submit class: "btn btn-primary"
+    .photo-location
+      = f.fields_for :location do |f|
+        = f.label :address
+        = f.text_field :address
+      %br
+    .photo-button
+      = f.submit class: "btn btn-primary"

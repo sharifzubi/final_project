@@ -160,3 +160,35 @@ img {
 
   }
 }
+
+
+// PHOTOS NEW PAGE
+
+#photos-new-page {
+  margin-top: 20px;
+  background: aliceblue;
+  padding: 40px;
+
+  .photos-new {
+    padding-left: 25px;
+  }
+}
+
+#photos-form {
+  padding: 25px;
+  margin-top: 30px;
+  border: 2px solid;
+
+  .photo-text {
+    padding-bottom: 10px;
+  }
+  .photo-image {
+    padding-bottom: 10px;
+  }
+  .photo-memory {
+    padding-bottom: 22px;
+  }
+  .photo-location {
+    padding-bottom: 25px;
+  }
+}

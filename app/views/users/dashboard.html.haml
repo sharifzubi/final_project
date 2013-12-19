@@ -25,6 +25,7 @@
                     %li= memory.text
               .location
                 = photo.location.address unless photo.location.nil?
+                / = "Location: #{photo.location.address}" unless photo.location.nil?
           .clearfix
 
     #dashboard-links
